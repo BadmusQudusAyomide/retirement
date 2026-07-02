@@ -23,17 +23,19 @@ export default function Home() {
             title="Moments worth preserving"
             description="This section is ready for portraits, ceremonies, and family memories."
           />
-          <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
             {["Early Years", "Career", "Leadership", "Awards", "Retirement Ceremony", "Family"].map(
               (item) => (
                 <div
                   key={item}
-                  className="aspect-[4/3] rounded-[1.6rem] border border-[rgba(23,50,77,0.08)] bg-[linear-gradient(135deg,rgba(23,50,77,0.9),rgba(54,88,71,0.88))] p-6 text-white shadow-[0_18px_44px_rgba(23,50,77,0.12)]"
+                  className="group flex min-h-[240px] w-full flex-col rounded-[1.6rem] border border-[rgba(23,50,77,0.08)] bg-[linear-gradient(135deg,rgba(23,50,77,0.94),rgba(54,88,71,0.9))] p-5 text-white shadow-[0_18px_44px_rgba(23,50,77,0.12)] transition-transform duration-300 hover:-translate-y-1 sm:min-h-[280px] sm:p-6"
                 >
-                  <p className="text-sm uppercase tracking-[0.3em] text-[rgba(255,255,255,0.75)]">
+                  <p className="text-xs uppercase tracking-[0.3em] text-[rgba(255,255,255,0.75)] sm:text-sm">
                     {item}
                   </p>
-                  <div className="mt-6 h-full rounded-[1.2rem] border border-white/15 bg-white/10" />
+                  <div className="mt-5 flex-1 rounded-[1.2rem] border border-white/15 bg-white/10 p-4 sm:mt-6 sm:p-5">
+                    <div className="h-full min-h-[140px] rounded-[1rem] border border-dashed border-white/20 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_55%)]" />
+                  </div>
                 </div>
               )
             )}
@@ -95,4 +97,3 @@ export default function Home() {
     </main>
   );
 }
-
