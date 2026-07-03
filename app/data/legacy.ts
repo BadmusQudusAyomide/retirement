@@ -1,14 +1,16 @@
 export const siteCopy = {
-  title: "Legacy of Service",
+  title: "Birthday and Retirement Celebration",
   retireeName: "Mr. John Adewale",
-  role: "Celebrating 37 Years of Dedicated Service",
+  role: "Celebrating a special birthday and 37 years of dedicated service",
   years: "1989 - 2026",
-  tagline: "A legacy that will continue to inspire",
+  tagline: "A joyful tribute to a life well lived and faithfully served",
+  birthdayLine: "Happy Birthday and Happy Retirement",
+  celebrationLine: "Join us in honoring both milestones with love and gratitude",
 };
 
 export const biography = {
   intro:
-    "A devoted leader, mentor, and family man whose life reflects quiet excellence, consistency, and service.",
+    "A devoted leader, mentor, and family man whose life reflects quiet excellence, consistency, service, and a birthday worth celebrating.",
   highlights: [
     {
       label: "Childhood",
@@ -92,4 +94,3 @@ export const tributes = [
     author: "Family Friend",
   },
 ];
-

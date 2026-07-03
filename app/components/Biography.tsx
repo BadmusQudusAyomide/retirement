@@ -11,8 +11,8 @@ export function Biography() {
     <section id="biography" className="px-6 py-20 sm:px-10 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="About"
-          title="A life shaped by service"
+          eyebrow="Story"
+          title="A life shaped by service and celebration"
           description={biography.intro}
         />
 
@@ -30,7 +30,7 @@ export function Biography() {
                 Portrait Placeholder
               </p>
               <p className="mt-2 text-sm leading-7 text-[var(--slate)]">
-                Replace this block with the retiree’s portrait once the official image is ready.
+                Replace this block with the retiree&apos;s portrait once the official image is ready.
               </p>
             </div>
           </motion.div>
@@ -54,7 +54,7 @@ export function Biography() {
 
             <blockquote className="rounded-[1.8rem] border-l-4 border-[var(--gold)] bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(248,246,241,0.95))] p-7 shadow-[0_14px_40px_rgba(23,50,77,0.06)]">
               <p className="font-accent text-2xl leading-relaxed text-[var(--navy)]">
-                “{biography.quote}”
+                &ldquo;{biography.quote}&rdquo;
               </p>
             </blockquote>
           </div>
@@ -63,4 +63,3 @@ export function Biography() {
     </section>
   );
 }
-

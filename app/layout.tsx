@@ -21,8 +21,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Legacy of Service",
-  description: "A premium retirement tribute website celebrating a life of service and impact.",
+  title: "Birthday and Retirement Celebration",
+  description:
+    "A premium celebration website honoring a special birthday and a remarkable retirement.",
 };
 
 export default function RootLayout({
