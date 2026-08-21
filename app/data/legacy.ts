@@ -59,7 +59,7 @@ export const biography = {
 
 export const timeline = [
   {
-    year: "1991",
+    year: "2001",
     title: "Assistant Education Officer II",
     details: "Began service as a classroom teacher and education officer with dedication and focus.",
   },
