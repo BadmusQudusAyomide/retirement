@@ -50,7 +50,7 @@ export const biography = {
     },
     {
       label: "Legacy",
-      text: "Leaves behind a record of service, 228 notable achievements, and 32 awards that will be remembered for years to come.",
+      text: "Leaves behind a record of service, 228 projects, and 32 awards that will be remembered for years to come.",
     },
   ],
   quote:
@@ -124,7 +124,7 @@ export const achievements = [
 
 export const numbers = [
   { value: "35", label: "Years Served" },
-  { value: "228", label: "Milestones Reached" },
+  { value: "228", label: "Projects" },
   { value: "32", label: "Awards" },
   { value: "1991", label: "Started Service" },
 ];

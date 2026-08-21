@@ -8,6 +8,9 @@
   --gold: #b68f43;
   --forest: #4c6a57;
   --slate: #67707a;
+  --font-body-stack: "Segoe UI", Arial, Helvetica, sans-serif;
+  --font-display-stack: Georgia, "Times New Roman", serif;
+  --font-accent-stack: Georgia, "Times New Roman", serif;
 }
 
 @theme inline {

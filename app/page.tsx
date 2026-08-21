@@ -32,7 +32,7 @@ const galleryImages = [
   "/photos/IMG_6590.JPG",
   "/photos/IMG_6591.JPG",
 ];
-const galleryFeatured = ["/photos/IMG_6588.JPG", "/photos/IMG_6591.JPG"];
+const galleryFeatured: [string, string] = ["/photos/IMG_6588.JPG", "/photos/IMG_6591.JPG"];
 const galleryStream = galleryImages.filter((src) => !galleryFeatured.includes(src));
 const galleryRatios = ["aspect-[4/5]", "aspect-[1/1]", "aspect-[3/4]", "aspect-[5/6]"];
 
