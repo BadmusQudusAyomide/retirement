@@ -11,7 +11,7 @@ export function Hero() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative isolate overflow-hidden px-6 pb-20 pt-28 sm:px-10 lg:px-12 lg:pt-32">
+    <section className="relative isolate overflow-hidden px-6 pb-20 pt-16 sm:px-10 sm:pt-20 lg:px-12 lg:pt-24">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(184,146,63,0.16),_transparent_40%),linear-gradient(180deg,#f8f6f1_0%,#f4efe3_100%)]" />
       <div className="absolute inset-0 -z-10 opacity-[0.04] [background-image:radial-gradient(rgba(23,50,77,0.35)_1px,transparent_1px)] [background-size:18px_18px]" />
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
