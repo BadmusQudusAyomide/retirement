@@ -1,8 +1,8 @@
 export const siteCopy = {
   title: "Birthday and Retirement Celebration",
   retireeName: "Mrs. M.O. Yusuf",
-  role: "Celebrating 35 years of dedicated service and a remarkable legacy",
-  years: "1991 - 2026",
+  role: "Celebrating 25 years of dedicated service and a remarkable legacy",
+  years: "2001 - 2026",
   tagline: "A joyful tribute to a life of service, leadership, and love",
   birthdayLine: "Happy Birthday, Mum",
   celebrationLine: "Join us in honoring both milestones with love and gratitude",
@@ -38,7 +38,7 @@ export const biography = {
   highlights: [
     {
       label: "Early Service",
-      text: "Joined as an Assistant Education Officer II in 1991 and began a career built on commitment and care.",
+      text: "Joined as an Assistant Education Officer II in 2001 and began a career built on commitment and care.",
     },
     {
       label: "Growth",
@@ -64,52 +64,52 @@ export const timeline = [
     details: "Began service as a classroom teacher and education officer with dedication and focus.",
   },
   {
-    year: "1994",
+    year: "2004",
     title: "Assistant Education Officer I",
     details: "Continued to grow in responsibility and trust within the education system.",
   },
   {
-    year: "1997",
+    year: "2007",
     title: "Education Officer II",
     details: "Expanded her role with professionalism and a deeper commitment to students.",
   },
   {
-    year: "2000",
+    year: "2010",
     title: "Education Officer I",
     details: "Advanced through steady service and a reputation for excellence.",
   },
   {
-    year: "2003",
+    year: "2013",
     title: "Senior Education Officer",
     details: "Stepped into a senior leadership role with wisdom and responsibility.",
   },
   {
-    year: "2006",
+    year: "2016",
     title: "Principal Education Officer",
     details: "Served with stronger administrative leadership and dependable guidance.",
   },
   {
-    year: "2010",
+    year: "2019",
     title: "Chief Education Officer",
     details: "Recognized for years of steadfast service and strong educational leadership.",
   },
   {
-    year: "2014",
+    year: "2021",
     title: "Assistant Head Teacher",
     details: "Continued her leadership journey with mentorship and daily dedication.",
   },
   {
-    year: "2017",
+    year: "2023",
     title: "Vice Head Teacher",
     details: "Supported school leadership with maturity, balance, and commitment.",
   },
   {
-    year: "2021",
+    year: "2024",
     title: "Head Teacher / Headmistress",
     details: "Led at the highest school level with grace, structure, and care.",
   },
   {
-    year: "2023-2026",
+    year: "2025-2026",
     title: "Headmistress",
     details: "Closed out her career as a respected senior headmistress, leaving a lasting legacy.",
   },
@@ -123,10 +123,10 @@ export const achievements = [
 ];
 
 export const numbers = [
-  { value: "35", label: "Years Served" },
+  { value: "25", label: "Years Served" },
   { value: "228", label: "Projects" },
   { value: "32", label: "Awards" },
-  { value: "1991", label: "Started Service" },
+  { value: "2001", label: "Started Service" },
 ];
 
 export const tributes = [

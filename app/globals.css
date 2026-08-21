@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -11,6 +12,7 @@
   --font-body-stack: "Segoe UI", Arial, Helvetica, sans-serif;
   --font-display-stack: Georgia, "Times New Roman", serif;
   --font-accent-stack: Georgia, "Times New Roman", serif;
+  --font-script-stack: "Great Vibes", "Segoe Script", cursive;
 }
 
 @theme inline {
@@ -31,6 +33,11 @@ body {
     linear-gradient(180deg, #fbf8f2 0%, #f5eedf 100%);
   color: var(--foreground);
   font-family: var(--font-body-stack), Arial, Helvetica, sans-serif;
+}
+
+.font-script {
+  font-family: var(--font-script-stack);
+  font-weight: 400;
 }
 
 ::selection {

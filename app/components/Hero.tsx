@@ -102,11 +102,11 @@ export function Hero() {
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               <div className="rounded-[1.2rem] border border-[rgba(23,50,77,0.08)] bg-white/85 p-4">
                 <p className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">Service</p>
-                <p className="mt-2 text-sm leading-6 text-[var(--slate)]">1991 - 2026</p>
+                <p className="mt-2 text-sm leading-6 text-[var(--slate)]">2001 - 2026</p>
               </div>
               <div className="rounded-[1.2rem] border border-[rgba(23,50,77,0.08)] bg-white/85 p-4">
                 <p className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">Legacy</p>
-                <p className="mt-2 text-sm leading-6 text-[var(--slate)]">35 years of service</p>
+                <p className="mt-2 text-sm leading-6 text-[var(--slate)]">25 years of service</p>
               </div>
             </div>
             <Countdown />
