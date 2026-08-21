@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { biography } from "../data/legacy";
 import { SectionHeading } from "./SectionHeading";
 
@@ -12,7 +13,7 @@ export function Biography() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Story"
-          title="A life shaped by service and celebration"
+          title="A life shaped by service, leadership, and love"
           description={biography.intro}
         />
 
@@ -24,13 +25,28 @@ export function Biography() {
             transition={{ duration: 0.7 }}
             className="relative overflow-hidden rounded-[2rem] bg-white p-6 shadow-[0_20px_60px_rgba(23,50,77,0.08)]"
           >
-            <div className="aspect-[4/5] rounded-[1.4rem] border border-[rgba(23,50,77,0.08)] bg-[linear-gradient(180deg,#d8c8a8,#f7f2e9_48%,#eef1ed)]" />
+            <div className="relative overflow-hidden rounded-[1.5rem] border border-[rgba(23,50,77,0.08)]">
+              <div className="relative aspect-[4/5]">
+                <Image
+                  src="/photos/IMG_6588.JPG"
+                  alt="Official portrait of Mrs. M.O. Yusuf"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 420px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(23,50,77,0.02),rgba(23,50,77,0.45))]" />
+              <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                <p className="text-xs uppercase tracking-[0.35em] text-[rgba(255,255,255,0.8)]">
+                  Service Portrait
+                </p>
+                <p className="mt-2 font-display text-2xl">Grace in every season</p>
+              </div>
+            </div>
             <div className="mt-4 rounded-[1.4rem] bg-[var(--ivory)] p-5">
-              <p className="text-sm uppercase tracking-[0.3em] text-[var(--gold)]">
-                Portrait Placeholder
-              </p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[var(--gold)]">Legacy Card</p>
               <p className="mt-2 text-sm leading-7 text-[var(--slate)]">
-                Replace this block with the retiree&apos;s portrait once the official image is ready.
+                A woman of quiet strength, careful leadership, and a legacy carried with dignity.
               </p>
             </div>
           </motion.div>

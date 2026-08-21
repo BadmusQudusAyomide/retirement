@@ -1,13 +1,40 @@
 import { Biography } from "./components/Biography";
 import { Footer } from "./components/Footer";
+import { Gallery } from "./components/Gallery";
 import { Hero } from "./components/Hero";
 import { Achievements } from "./components/Achievements";
 import { ScrollProgress } from "./components/ScrollProgress";
 import { SectionHeading } from "./components/SectionHeading";
 import { Timeline } from "./components/Timeline";
-import { numbers, siteCopy, tributes } from "./data/legacy";
+import { letter } from "./data/legacy";
 
-const galleryGroups = ["Birthday", "Career", "Leadership", "Awards", "Celebration", "Family"];
+const galleryImages = [
+  "/photos/1CA2B946-8425-44BA-8F67-3B85E6C683EA(1).png",
+  "/photos/1CA2B946-8425-44BA-8F67-3B85E6C683EA.png",
+  "/photos/208FCE66-786C-4610-AF13-3BA947D5C9D4(1).png",
+  "/photos/208FCE66-786C-4610-AF13-3BA947D5C9D4.png",
+  "/photos/6764e36f-010a-491d-a0dd-b12ff642126b.jpg",
+  "/photos/7b603812-3452-49eb-a1e1-d9fe97f46084.jpg",
+  "/photos/7CC67575-EEFF-4021-8818-5E65AE7E075C.png",
+  "/photos/90404a1a-6352-43f1-a927-0a7d57b20d6d.jpg",
+  "/photos/A80C1EC1-D20E-4381-8BD2-46CD08935BBD.png",
+  "/photos/D3D42A56-0C72-4180-8C65-56963DDBDC3D.png",
+  "/photos/IMG_0062.JPG",
+  "/photos/IMG_6463.JPG",
+  "/photos/IMG_6464.JPG",
+  "/photos/IMG_6465.JPG",
+  "/photos/IMG_6584.JPG",
+  "/photos/IMG_6585.JPG",
+  "/photos/IMG_6586.JPG",
+  "/photos/IMG_6587.JPG",
+  "/photos/IMG_6588.JPG",
+  "/photos/IMG_6589.JPG",
+  "/photos/IMG_6590.JPG",
+  "/photos/IMG_6591.JPG",
+];
+const galleryFeatured = ["/photos/IMG_6588.JPG", "/photos/IMG_6591.JPG"];
+const galleryStream = galleryImages.filter((src) => !galleryFeatured.includes(src));
+const galleryRatios = ["aspect-[4/5]", "aspect-[1/1]", "aspect-[3/4]", "aspect-[5/6]"];
 
 export default function Home() {
   return (
@@ -15,117 +42,65 @@ export default function Home() {
       <ScrollProgress />
       <Hero />
 
-      <section className="px-6 py-8 sm:px-10 lg:px-12">
-        <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          <div className="rounded-[1.6rem] border border-[rgba(23,50,77,0.08)] bg-white p-6 shadow-[0_16px_40px_rgba(23,50,77,0.06)]">
-            <p className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">Birthday</p>
-            <p className="mt-3 font-display text-2xl text-[var(--navy)]">A day to celebrate life</p>
-            <p className="mt-3 text-sm leading-7 text-[var(--slate)]">
-              {siteCopy.birthdayLine} with joy, gratitude, and family.
-            </p>
-          </div>
-          <div className="rounded-[1.6rem] border border-[rgba(23,50,77,0.08)] bg-white p-6 shadow-[0_16px_40px_rgba(23,50,77,0.06)]">
-            <p className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">Retirement</p>
-            <p className="mt-3 font-display text-2xl text-[var(--navy)]">A career to honor</p>
-            <p className="mt-3 text-sm leading-7 text-[var(--slate)]">
-              Decades of service, leadership, and lasting impact.
-            </p>
-          </div>
-          <div className="rounded-[1.6rem] border border-[rgba(23,50,77,0.08)] bg-white p-6 shadow-[0_16px_40px_rgba(23,50,77,0.06)]">
-            <p className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">Theme</p>
-            <p className="mt-3 font-display text-2xl text-[var(--navy)]">Warm, elegant, timeless</p>
-            <p className="mt-3 text-sm leading-7 text-[var(--slate)]">
-              Designed to feel like a family celebration and a formal tribute in one.
-            </p>
-          </div>
-          <div className="rounded-[1.6rem] border border-[rgba(23,50,77,0.08)] bg-white p-6 shadow-[0_16px_40px_rgba(23,50,77,0.06)]">
-            <p className="text-xs uppercase tracking-[0.3em] text-[var(--gold)]">Legacy</p>
-            <p className="mt-3 font-display text-2xl text-[var(--navy)]">A story still inspiring</p>
-            <p className="mt-3 text-sm leading-7 text-[var(--slate)]">
-              Built to celebrate both the person and the journey.
-            </p>
-          </div>
+      <section id="letter" className="px-6 py-14 sm:px-10 lg:px-12">
+        <div className="mx-auto max-w-5xl">
+          <SectionHeading
+            eyebrow="Open Letter"
+            title="A letter of love and gratitude"
+            description="This is written in a letter style so family and guests can read it naturally, line by line."
+            align="center"
+          />
+          <article className="mt-12 rounded-[2rem] border border-[rgba(23,50,77,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(250,245,236,0.96))] p-7 shadow-[0_20px_60px_rgba(23,50,77,0.08)] sm:p-10 lg:p-14">
+            <div className="mx-auto max-w-3xl">
+              <h2 className="mt-4 font-display text-3xl tracking-tight text-[var(--navy)] sm:text-4xl">
+                {letter.salutation}
+              </h2>
+              <div className="mt-8 space-y-6 text-base leading-9 text-[var(--slate)] sm:text-lg">
+                {letter.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+              <div className="mt-8 space-y-3 border-l-4 border-[var(--gold)] bg-[rgba(184,146,63,0.05)] px-5 py-4">
+                {letter.closingLines.map((line) => (
+                  <p key={line} className="text-base leading-8 text-[var(--navy)] sm:text-lg">
+                    {line}
+                  </p>
+                ))}
+              </div>
+              <p className="mt-8 text-base leading-8 text-[var(--slate)] sm:text-lg">
+                {letter.signOff}
+              </p>
+              <p className="mt-6 font-display text-2xl text-[var(--navy)]">
+                {letter.congratulations}
+              </p>
+              <p className="mt-4 text-sm uppercase tracking-[0.28em] text-[var(--gold)]">
+                {letter.signature}
+              </p>
+            </div>
+          </article>
         </div>
       </section>
 
       <Biography />
       <Timeline />
-      <Achievements />
 
       <section id="gallery" className="px-6 py-20 sm:px-10 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Gallery"
-            title="Snapshots from the celebration"
-            description="A flexible gallery layout for birthday moments, retirement honors, and family memories."
+            title="Memories in pictures"
+            description="A swipeable gallery on mobile and a curated mosaic on desktop, with official portraits placed front and center."
           />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-            {galleryGroups.map((item) => (
-              <div
-                key={item}
-                className="group flex min-h-[240px] w-full flex-col rounded-[1.6rem] border border-[rgba(23,50,77,0.08)] bg-[linear-gradient(135deg,rgba(23,50,77,0.94),rgba(54,88,71,0.9))] p-5 text-white shadow-[0_18px_44px_rgba(23,50,77,0.12)] transition-transform duration-300 hover:-translate-y-1 sm:min-h-[280px] sm:p-6"
-              >
-                <p className="text-xs uppercase tracking-[0.3em] text-[rgba(255,255,255,0.75)] sm:text-sm">
-                  {item}
-                </p>
-                <div className="mt-5 flex-1 rounded-[1.2rem] border border-white/15 bg-white/10 p-4 sm:mt-6 sm:p-5">
-                  <div className="h-full min-h-[140px] rounded-[1rem] border border-dashed border-white/20 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_55%)]" />
-                </div>
-              </div>
-            ))}
-          </div>
+          <Gallery
+            images={galleryImages}
+            featured={galleryFeatured}
+            stream={galleryStream}
+            ratios={galleryRatios}
+          />
         </div>
       </section>
 
-      <section className="px-6 py-20 sm:px-10 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            eyebrow="Messages"
-            title="Words of love and gratitude"
-            description="Beautiful note cards for birthday wishes, retirement tributes, and family appreciation."
-          />
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {tributes.map((item) => (
-              <article
-                key={item.author}
-                className="rounded-[1.6rem] bg-white p-7 shadow-[0_16px_40px_rgba(23,50,77,0.06)]"
-              >
-                <p className="text-lg leading-8 text-[var(--slate)]">&ldquo;{item.quote}&rdquo;</p>
-                <p className="mt-5 text-sm uppercase tracking-[0.3em] text-[var(--gold)]">
-                  - {item.author}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 py-20 sm:px-10 lg:px-12">
-        <div className="mx-auto grid max-w-7xl gap-8 rounded-[2rem] bg-[linear-gradient(180deg,#17324d,#244764)] px-8 py-12 text-white shadow-[0_24px_70px_rgba(23,50,77,0.18)] lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-[rgba(255,255,255,0.65)]">
-              Family Appreciation
-            </p>
-            <h2 className="mt-4 font-display text-3xl tracking-tight sm:text-4xl">
-              Our family sincerely appreciates everyone who joined this celebration.
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-[rgba(255,255,255,0.82)]">
-              This section can later be expanded into a full family message, ceremony details, or
-              a protected album.
-            </p>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {numbers.slice(0, 2).map((item) => (
-              <div key={item.label} className="rounded-[1.5rem] bg-white/10 p-6">
-                <p className="font-display text-4xl text-[var(--gold)]">{item.value}</p>
-                <p className="mt-2 text-sm uppercase tracking-[0.25em] text-white/70">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Achievements />
 
       <Footer />
     </main>
