@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { BookOpen, CakeSlice, ChevronRight, PartyPopper } from "lucide-react";
+import { Countdown } from "./Countdown";
 import { siteCopy } from "../data/legacy";
 
 export function Hero() {
@@ -108,6 +109,7 @@ export function Hero() {
                 <p className="mt-2 text-sm leading-6 text-[var(--slate)]">35 years of service</p>
               </div>
             </div>
+            <Countdown />
           </div>
         </motion.div>
       </div>
