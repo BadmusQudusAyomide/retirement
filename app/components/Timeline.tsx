@@ -38,13 +38,15 @@ export function Timeline() {
                     : "border-[rgba(23,50,77,0.08)] bg-[rgba(255,255,255,0.72)]"
                 }`}
               >
-                <div className="flex items-start gap-5">
-                  <div className="min-w-24 rounded-full bg-[var(--navy)] px-4 py-2 text-center text-sm font-semibold text-white">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
+                  <div className="w-fit shrink-0 rounded-full bg-[var(--navy)] px-4 py-2 text-center text-sm font-semibold text-white">
                     {item.year}
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between gap-4">
-                      <h3 className="font-display text-2xl text-[var(--navy)]">{item.title}</h3>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-start justify-between gap-4">
+                      <h3 className="min-w-0 font-display text-xl leading-tight text-[var(--navy)] sm:text-2xl">
+                        {item.title}
+                      </h3>
                       <ChevronDown
                         className={`shrink-0 text-[var(--gold)] transition-transform duration-300 ${
                           expanded ? "rotate-180" : ""
